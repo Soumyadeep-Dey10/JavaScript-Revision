@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //boolean'
+        console.log(5==5); // Output: true
+        console.log(5==6); // Output: false
+
+        //null and undefined
+        let a = null;
+        console.log(a); // Output: null
+        let b;
+        console.log(b); // Output: undefined
+        console.log(typeof a); // Output: object (this is a known JavaScript quirk)
+        console.log(typeof b); // Output: undefined
+
+        //bigint
+        let x=100n;
+        console.log(typeof x); // Output: bigint
+        let y=BigInt(123456);
+        console.log(typeof y); // Output: bigint
+        let z=BigInt("123456");
+        console.log(typeof z); // Output: bigint
+
+        //symbol
+        let s1="Hello";
+        let s2="Hello";
+        console.log(s1 === s2); // Output: true (strings are compared by value)
+        let sym1 = Symbol('Hello');
+        let sym2 = Symbol('Hello');
+        console.log(sym1 === sym2); // Output: false (symbols are unique)
+    </script>
+</body>
+</html>
