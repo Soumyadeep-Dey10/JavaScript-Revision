@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //implicit typecasting
+        let a=10/10+"100";
+        console.log(a,typeof a); // Output: "110" string
+        let b=10/10*"100";
+        console.log(b,typeof b); // Output: 100 number
+        let c=10/10-"100";
+        console.log(c,typeof c); // Output: -99 number
+
+        //explicit typecasting
+        let n=100;
+        console.log(n,typeof n); // Output: 100 number
+        let str=String(n);
+        console.log(str,typeof str); // Output: "100" string
+        let s="100";
+        console.log(s,typeof s); // Output: "100" string
+        let num=Number(s);
+        console.log(num,typeof num); // Output: 100 number
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=prompt("Enter a number:");
+        console.log(a,typeof a); 
+        let b=prompt("Enter a number:");
+        console.log(b,typeof b); 
+        console.log(a+b,typeof (a+b)); 
+
+        let c=Number(prompt("Enter a number:"));
+        console.log(c,typeof c);
+        let d=Number(prompt("Enter a number:"));
+        console.log(d,typeof d);
+        console.log(c+d,typeof (c+d));
+
+        let otp=1234;
+        let no=Number(prompt (`Enter the above OTP ${otp}`));
+        if(otp===no){
+            console.log("Login successful");
+        } else {    
+            console.log("Login failed");
+        }
+    </script>
+</body>
+</html>
