@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(){
+    let a = 10
+    let b = 20
+    let res = a + b
+    console.log(res);
+    
+}
+add()
+
+function add1(a = 100, b = 200){
+    let res = a + b
+    console.log(res);
+}
+add1(10, 20)
+add1() //300, as no actual arg given so it will take the formal arg
+
+//function with parameter
+function add2(a, b){
+    console.log(a+b);
+}
+add2(5, 10)
+
+//user input
+    function add3(a, b){
+        console.log(a + b);
+    }
+    // let a = Number(prompt("Enter a number"))
+    // let b = Number(prompt("Enter a number"))
+    // add3(a, b)
+
+    //optimize it in a single line
+    add3(Number(prompt("Enter a number")), Number(prompt("Enter a number")))
+
+
+    //function with return type
+    function add4(a, b){
+        return a + b
+    }
+
+    console.log(add4(10, 20))
+
+    </script>
+</body>
+</html>
