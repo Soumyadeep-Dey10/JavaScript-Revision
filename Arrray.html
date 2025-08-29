@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //By using Array object
+let arr = new Array()
+console.log(arr);
+arr[0] = 10
+arr[1] = 20
+arr[2] = 30
+console.log(arr);
+console.log(arr.length);
+
+//by using literal way
+// let brr = [10, 20, 30]
+// console.log(brr);
+
+//         // inbuilt methods
+//         //1.push method
+//         console.log("Push Method");
+//         let arr1 = [10, 20, 30, 40]
+//         console.log(arr1);
+//         arr1.push(50)
+//         console.log(arr1);
+//         arr1.push(69,69)
+//         console.log(arr1);
+        
+//         // 2.unshift method 
+//         let  arr2 = [10, 20, 40]
+//         arr2.unshift(2);
+//         console.log(arr2);
+        
+//         arr2.unshift(4, 5 , 6);
+//         console.log(arr2);
+        
+//         // 3. pop method 
+//         let arr3 = [10, 20, 30]
+//         arr3.pop()
+//         console.log(arr3);
+
+//         // 4. shift method
+//         let arr4 = [10, 20, 30]
+//         arr4.shift()
+//         console.log(arr4);
+        
+//         // 5. slice method 
+//         console.log("Slice method");
+//         let arr5 = [10, 20, 30, 40]
+//         console.log((arr5.slice(2, 4)));
+//         console.log((arr5.slice(2)));
+//         console.log((arr5.slice(-4, -2)));
+//         console.log((arr5.slice(-3)));
+
+//         //splice method
+        let arr6 = [10, 20, 30, 40, 50]
+        console.log("Splice method");
+        
+        // console.log(arr6);
+        // console.log(arr6.splice(1, 2, "hi", "hello", "bye"));
+        // console.log(arr6);
+        // console.log(arr6.splice(0, 0, "hi", "hello", "bye"));
+        // console.log(arr6);
+        
+        console.log(arr6.splice(0, 1, "hi", "hello", "bye"));
+        console.log(arr6);
+        
+//         //reverse method
+//         console.log("Reverse method");
+//         let arr7 = [10, 20, 30, 40]
+//         console.log(arr7.reverse());
+        
+//         //join method
+//         console.log("Join method");
+//         let str = "helooo"
+//         let str1 = str.split("")
+//         console.log(str1);
+//         console.log(str1.join(""));
+
+//         //reverse a string using split and join
+//         let str2 = str.split("").reverse().join("")
+//         console.log(str2);
+        
+//         //concat
+//         console.log("Concat method");
+//         let h = [10, 20, 30]
+//         let l = ["Hi", "hello"]
+//         console.log(h.concat(l));
+
+        
+        let arr = [1 , 2, 3]
+        let arr1 = [4, 5 ,6]
+        let newArr = arr.push(arr1)
+        console.log(newArr); 
+
+        //this problem can be solved by concat
+        let newArr1 = arr.concat(arr1)
+        console.log(newArr1);
+        
+        //spread operator, alternative to concat and better than concat as it can take multiple array to spread
+        let spreadedArray = [...arr, ...arr1]
+        console.log(spreadedArray);
+        
+
+        const nestedArray = [1,2,3, [4,5,6] , 7, [6,7, [4,5]]]
+
+        //reduce all the nested depth, just spread all the array data
+        const realArray = nestedArray.flat(Infinity)
+        console.log(realArray);
+        
+        
+        //map method : used to iterate a array
+        // let array = [1, 2, 4, 3 ,5]
+        // // without map 
+
+        // for(let i = 0; i < array.length; i++){
+        //     console.log(array[i]);
+        // }
+
+        // //with map method
+        // let a = array.map((element, index, arr) => {
+        //     // console.log(element, index, arr); //a is not needed for it
+        //     return element+" "+ index + " "+ arr
+        // })
+        // console.log(a);
+
+        //forEach method : same function as map, but dont allow return and answer is not as an array, map return answer as an array
+        // array.forEach((element, index, arr) => {
+        //     console.log(element);
+        //     // return element+" "+ index + " "+ arr //not allowed
+        // }) 
+
+
+        // //filter method : used to filter array element based on some condition
+
+        // // check even elements without filter method 
+        // // for(let i = 0; i< array.length; i++){
+        // //     console.log(array[i] % 2 == 0);
+        // // }
+
+        // //with filter function
+        // let c = array.filter((element, index, arr) => {
+        //     return element % 2 == 0
+        //     // console.log(element); //it will give the boolean output as true or false not elements
+        // })
+        // console.log(c);
+
+        // // filter function in one line 
+        // let c1 = array.filter((element, index, arr) => element % 2 == 0)
+        // console.log(c1);
+
+        // //reduce method : sum all the array element together
+
+        // //without reduce method
+        // let sum = 0
+        // for(let i = 0; i < array.length; i++){
+        //     sum += array[i]
+        // }
+         
+        // //with reduce function
+        // let d = array.reduce((element,accumulator, index, arr) => {
+        //     return element + accumulator //accumulator holds the element of the next elemnt of the current index 
+        // })
+        // console.log(d);
+
+        // //includes
+        // console.log("Includes method");
+        // let arr5 = [10, 20, 30, 40]
+        // console.log(arr.includes(100));
+        // console.log(arr.includes(10));
+        
+        // //indexOf
+        // let arr6 = [1,4,1, 2, 3]
+        // console.log(arr6.indexOf(1));
+        
+        // //lastIndexOf
+        //  let arr7 = [1,4,1, 2, 3]
+        // console.log(arr6.lastIndexOf(1));
+
+        // some() method : works like or operator
+        // let arr8 = [1,4,1, 2, 3]
+        // console.log(arr8.some((element) => {element >= 5}));
+
+        //every() method : works like and operator
+        // console.log("Every method");
+        
+        // let arr9 = [1,4,1, 6, 3]
+        // console.log(arr9.every((element) => {return element <= 5}));
+        // console.log(arr9.every((element) => {return element >= 5}));
+
+        //sort() function : sort the array
+        // console.log("Sort method");
+        // let fruits = ["apple", "mango", "banana", "orange"]
+        // console.log(fruits.sort());
+        
+        // let crr = [5,2,4,1,3]
+        // console.log(crr.sort((x, y) => {return x - y}));
+        // console.log(crr.sort((x, y) => {return y - x}));
+        
+    </script>
+</body>
+</html>
+
+
+
