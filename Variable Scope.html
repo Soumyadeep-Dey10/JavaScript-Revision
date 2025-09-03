@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        {
+            var a = 10
+            let b = 20
+            const c = 30
+            console.log(a, b, c);
+            
+        }
+        console.log(a);
+        // console.log(b);
+        // console.log(c);
+
+        // function scope
+        function sum() {
+            var x = 10
+            let y = 20
+            const z = 30
+            console.log(x+y+z);
+            
+        }
+        sum()
+        // console.log(x);
+        // console.log(y);
+        // console.log(z);
+        
+        
+        // global scope 
+            var m = 5
+            let n = 6
+            const o = 7
+
+
+        function mul() {
+           
+            console.log(m*n*o);
+            
+        }
+        mul()
+
+        function sub() {
+           
+            console.log(m-n-o);
+            
+        }
+        sub()
+        
+        
+    </script>
+</body>
+</html>
