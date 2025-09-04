@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            border: 2px solid red;
+            width: 300px;
+            height: 200px;
+        }
+        .list-item{
+            border: 2px solid black;
+            width: 100px;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id ="head">Language:</h1>
+        <ul>
+            <li class="list-item">Java</li>
+            <li class="list-item">Node js</li>
+            <li class="list-item">JavaScript</li>
+            <li class="list-item">React</li>
+        </ul>
+    </div>
+
+    <script>
+        //by using id
+        let  h1 = document.getElementById("head")
+        console.log(h1);
+        h1.style.color = "red"
+
+        //by using class
+        let list = document.getElementsByClassName("list-item")
+        console.log(list); //return as HTMLCollection, it is an impure array 
+        
+        // array functions will not work as it is impure array 
+        // list.map((x) => {
+        //     x.style.color = "blue"
+        // })
+        
+        //2nd way of checking if it is pure array or not
+        //Array.isArray()
+        console.log(Array.isArray(list));
+
+        //Change the array to pure array
+        let list1 = Array.from(list) //now it is a pure array
+        console.log(Array.isArray(list1));
+
+        list1.map((x) => {
+            x.style.color = "blue"
+        })
+
+        //by using tag
+        let tag = document.getElementsByTagName("li")
+        console.log(tag); //return as HTMLCollection
+        //other way of manupulaion
+        tag[0].style.color = "hotpink"
+        tag[1].style.color = "goldenrod"
+        for(let i = 0; i < tag.length; i++){
+            tag[i].style.color = "tomato"
+        }
+        
+        //querySelector()
+        let q = document.querySelector("#head")
+        console.log(q);
+        q.style.color = "blue"
+
+        //querySelectorAll()
+        let qs = document.querySelectorAll(".list-item")
+        console.log(qs); //it will return answer as NodeList
+        console.log(Array.isArray(qs)); //it is also a impure array
+
+        //difference between HTMLCollection and NodeList : ForEach method is applicable directly to NodeList but not in HTMLCollection
+        qs.forEach((x) => {
+            x.style.color = "white"
+            x.style.backgroundColor = "red"
+        })
+        
+        
+    </script>
+</body>
+</html>

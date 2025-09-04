@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a{
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            padding: 50px;
+        }
+        #b{
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            padding: 50px;
+        }
+        #c{
+           width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            padding: 50px; 
+        }
+        #d{
+           width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            padding: 50px;  
+        }
+        #main{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="a">
+            <button onclick="alert('This is inline event')">Click me</button>
+        </div>
+        <div id="b">
+            <button id = "btn">Button </button>
+        </div>
+
+        <div id="c">
+            <button id = "btn1">Button 1</button>
+        </div>
+
+        <div id="d">
+            <button id = "btn2">Button 2</button>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelector("#btn")
+        btn.addEventListener("click", () => {
+            alert("External Event")
+        })
+
+        let btn1 = document.querySelector("#btn1")
+        btn1.addEventListener("dblclick", () => {
+            let div = document.querySelector("#c")
+            div.style.backgroundColor = "goldenrod"
+        })
+
+
+        let btn2 = document.querySelector("#btn2")
+        let div1 = document.querySelector("#d")
+
+        btn2.addEventListener("mouseover", () => {
+            div1.style.backgroundColor = "yellow"
+        })
+
+        btn2.addEventListener("mouseout", () => {
+            div1.style.backgroundColor = "red"
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            border: 2px solid red;
+            width: 300px;
+            height: 200px;
+        }
+        .list-item{
+            border: 2px solid yellow;
+            width: 100px;
+            list-style: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id = "head">
+        <h1 id ="h1">Language:</h1>
+        <ul>
+            <li class="list-item">Java</li>
+            <li class="list-item">Node js</li>
+            <li class="list-item">JavaScript</li>
+            <li class="list-item">React</li>
+        </ul>
+    </div>
+
+    <script>
+        //by using id
+        let  h1 = document.getElementById("h1")
+        console.log(h1);
+        h1.style.color = "red"
+
+        
+        //create a element in runtime by js
+        let li = document.createElement("li")
+        console.log(li);
+        
+        let li1 = document.createElement("li")
+        console.log(li1);
+        
+
+        let ul = document.querySelector("ul")
+        ul.append(li, li1)
+        
+        // li.innerText = "web"
+        // li.innerText = "<h1>Hello</h1>" //h1 will be treated as string here
+        
+        
+        // li.textContent = "dsa" //will work perfectly
+        // li.textContent = `<h1>Hello</h1>` //h1 will be treated as string here
+    
+        li.innerHTML = "hii"
+        li1.innerHTML = `<h1>Hello</h1>`
+
+        //add style attribute
+
+        //1. target element styling
+
+    
+        // li.setAttribute("class", "list-item")
+        // li1.setAttribute("class", "list-item")
+
+        // console.log(li.getAttribute("class"));
+        // li.removeAttribute("class")
+
+        //2. add attribute
+        li.className = "list-item"
+
+        //classList
+        li.classList.add("list-item")
+        console.log(li.classList.contains("list-item"));
+        // li.classList.remove("list-item")
+        
+    </script>
+</body>
+</html>
