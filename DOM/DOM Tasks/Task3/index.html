@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <form action="">
+        <input type="text" name="" id="name">
+    </form>
+
+    <script>
+        // let h1 = document.querySelector("h1")
+        // let data = document.querySelector("#name")
+
+
+        //While typing → e.target.value (good for real-time updates).
+
+// On submit → #id.value or use FormData to grab everything at once.
+
+        // data.addEventListener("input", (e) => {
+            
+        //     h1.innerHTML = document.querySelector("#name").value
+
+        //     // or,
+
+        //     //  h1.innerHTML = data.value
+            
+        //     // or, 
+
+        //     // console.log(e.target); 
+            
+        //     // h1.innerHTML = e.target.value
+        // })
+
+
+        // or
+        document.querySelector('form').addEventListener('input', (e) => {
+            e.preventDefault() //autometically dont submit the form
+            
+            let h1 = document.querySelector("h1")
+            let data = document.querySelector("#name")
+
+            h1.innerHTML = data.value
+
+        })
+    </script>
+</body>
+</html>
