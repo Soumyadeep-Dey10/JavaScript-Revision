@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch("https://api.github.com/users")
+        .then((data) => {
+            return data.json()
+        })
+        .then((x) => {
+            //this is like a array of object
+            return x.map((user) => {
+                let div = document.createElement("div")
+                let h1 = document.createElement("h1")
+                let h2 = document.createElement("h2")
+                let img = document.createElement("img")
+
+                h1.innerText = user.id
+                h2.innerText = user.login
+                img.src = user.avatar_url
+
+                div.append(h1, h2, img)
+                document.body.append(div)
+            })
+        })
+        .catch((err) => {
+            console.log(err);
+            
+        })
+    </script>
+</body>
+</html>

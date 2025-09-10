@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch("https://api.github.com/users")
+        .then((data) => {
+            console.log(data) //it will give the response object
+            return data.json()
+        })
+        .then((y) => console.log(y)) //will give as js object
+
+        
+        console.log("Hello");
+        
+        async function  getData() {
+            let data = await fetch("https://api.github.com/users")
+            let finalData = await data.json()
+            console.log(finalData);
+        }
+        getData()
+    </script>
+</body>
+</html>
