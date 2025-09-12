@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            border: 2px solid red;
+            width: 300px;
+        }
+        .list-item{
+            list-style: none;
+            border: 2px solid black;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1 id="head">Languages:</h1>
+        <ul>
+            <li class="list-item">Java</li>
+            <li class="list-item">Python</li>
+            <li class="list-item">JavaScript</li>
+            <li class="list-item">GoLang</li>
+        </ul>
+    </div>
+
+    <script>
+        // let java = document.querySelector(".list-item:nth-child(1)")
+        // java.addEventListener("click", () => {
+        //     java.style.backgroundColor = "red"
+        // })
+
+        // let python = document.querySelector(".list-item:nth-child(2)")
+        // python.addEventListener("click", () => {
+        //     python.style.backgroundColor = "red"
+        // })
+
+        // let js = document.querySelector(".list-item:nth-child(3)")
+        // js.addEventListener("click", () => {
+        //     js.style.backgroundColor = "red"
+        // })
+
+        // let go = document.querySelector(".list-item:nth-child(4)")
+        // go.addEventListener("click", () => {
+        //     go.style.backgroundColor = "red"
+        // })
+
+
+        // rathern than doing it individually do it using event delegation
+        let ul = document.querySelector("ul")
+        ul.addEventListener("click", (e) => {
+            if(e.target.matches(".list-item")){
+                e.target.style.backgroundColor = "red"
+            }
+        })
+
+        let li = document.createElement("li")
+        ul.appendChild(li)
+        li.innerText = "Rust"
+        li.style.listStyleType = "none"
+        li.setAttribute("class", "list-item")
+    </script>
+</body>
+</html>

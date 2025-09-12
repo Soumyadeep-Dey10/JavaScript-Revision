@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a{
+            border: 2px solid red;
+            width: 200px;
+            height: 200px;
+            padding: 50px;
+        }
+        #b{
+            border: 2px solid red;
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+        }
+        #c{
+            border: 2px solid red;
+            width: 50px;
+            height: 50px;
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <span>Grand Parent</span>
+    <div id="a">
+        <span>Parent</span>
+        <div id="b">
+            <span>child</span>
+            <div id="c">
+                <button>Click</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let a = document.querySelector('#a')
+        let b = document.querySelector('#b')
+        let c = document.querySelector('#c')
+
+        a.addEventListener('click', () => {
+            console.log("I am grand parent");
+            
+        }, true)
+
+        b.addEventListener('click', (e) => {
+            console.log("I am parent");
+            e.stopPropagation()
+        }, true)
+
+        c.addEventListener('click', (e) => {
+            console.log("Child element");
+        }, true)
+    </script>
+</body>
+</html>
