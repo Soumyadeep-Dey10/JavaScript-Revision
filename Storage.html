@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // all functions of localStorage and sessionStorage
+        // 1.setItem()
+        // 2.getItem()
+        // 3.removeItem()
+        // 4.length
+        // 5.clear()
+
+        //it comes from window object
+        localStorage.setItem("id", 100)
+        localStorage.setItem("Name", "Rup")
+
+        localStorage.getItem("id")
+        localStorage.removeItem("name")
+        localStorage.length
+        localStorage.clear()
+
+
+        // sessionStorage
+        //difference between two is that, in localstorage data will be saved even after the chrome window is closed but in sessionStorage the data will not be saved after the chrome window is closed
+        sessionStorage.setItem("id", 100)
+        sessionStorage.setItem("name", "rup")
+        sessionStorage.getItem("id")
+        sessionStorage.removeItem("id")
+        sessionStorage.length
+        sessionStorage.clear()
+    </script>
+</body>
+</html>
